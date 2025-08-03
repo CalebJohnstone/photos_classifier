@@ -14,6 +14,8 @@ import {
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { PhotoLibraryIcon } from './src/components/PhotoLibraryIcon';
+import { CaptureIcon } from './src/components/CaptureIcon';
+import { ShareIcon } from './src/components/ShareIcon';
 
 const Tab = createBottomTabNavigator();
 
@@ -127,9 +129,9 @@ function App() {
             if (route.name === 'Photos') {
               return <PhotoLibraryIcon size={size} color={color} />;
             } else if (route.name === 'Capture') {
-              return <Icon name="camera-alt" size={size} color={color} />;
+              return <CaptureIcon size={size} color={color} />;
             } else if (route.name === 'Share') {
-              return <Icon name="share" size={size} color={color} />;
+              return <ShareIcon size={size} color={color} />;
             }
           },
           tabBarActiveTintColor: '#6200EE',
